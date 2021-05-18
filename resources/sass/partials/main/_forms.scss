@@ -1,0 +1,32 @@
+form {
+    margin-top: calc(3 * #{$margin-left});
+    margin-bottom: calc(3 * #{$margin-left});
+    label {
+        margin-bottom: $margin-left;
+    }
+    input,
+    textarea {
+        width: 100%;
+        margin-bottom: calc(2 * #{$margin-left});
+    }
+    &:not(.special-form) {
+        button {
+            margin: 0 auto;
+            padding: $margin-left;
+            background-color: $color1;
+            color: $color2;
+        }
+    }
+    &.special-form {
+        display: inline-block;
+        button {
+            background-color: transparent;
+            border: none;
+            color: $color1;
+            cursor: pointer;
+        }
+    }
+    & > * {
+        display: block;
+    }
+}

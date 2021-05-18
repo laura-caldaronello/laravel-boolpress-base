@@ -1,4 +1,9 @@
-.wrapper {
-    width: 80%;
-    margin: 0 auto;
+a {
+    color: $color1;
+    &.my-button {
+        padding: calc(2 * #{$margin-left});
+        border-radius: 5px;
+        background-color: $color3;
+    }
 }
+

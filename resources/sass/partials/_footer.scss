@@ -1,0 +1,10 @@
+footer {
+    position: relative;
+    height: 50px;
+    background-color: $color1;
+    h3 {
+        @include verticalign;
+        margin-left: $margin-left;
+        color: $color2;
+    }
+}

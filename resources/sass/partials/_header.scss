@@ -1,0 +1,10 @@
+header {
+    position: relative;
+    height: 80px;
+    background-color: $color1;
+    h1 {
+        @include verticalign;
+        margin-left: $margin-left;
+        color: $color2;
+    }
+}

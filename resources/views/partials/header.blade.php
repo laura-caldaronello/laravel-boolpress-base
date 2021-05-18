@@ -1,1 +1,3 @@
-<header>header</header>
+<header>
+    <h1>BoolPress</h1>
+</header>
