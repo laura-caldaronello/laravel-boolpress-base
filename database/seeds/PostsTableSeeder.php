@@ -13,11 +13,11 @@ class PostsTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        for ($i = 0; $i < 3; $i++) {
+        for ($i = 0; $i < 20; $i++) {
             $new_post = new Post();
             $new_post->title = $faker->sentence();
             $new_post->author = $faker->name();
-            $new_post->text = $faker->text(100);
+            $new_post->text = $faker->text(1000);
             $new_post->save();
         }
     }

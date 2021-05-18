@@ -14,7 +14,11 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $posts = Post::all();
+        $data = [
+            'posts' => $posts
+        ];
+        return view('home',$data);
     }
 
     /**
