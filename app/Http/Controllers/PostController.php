@@ -28,7 +28,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('posts.forms');
     }
 
     /**
@@ -39,7 +39,12 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $new_post = new Post();
+        $new_post->fill($data);
+        $new_post->save();
+
+        return redirect()->route('pagina-home');
     }
 
     /**
@@ -50,7 +55,11 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Post::find($id);
+        $data = [
+            'post' => $post
+        ];
+        return view('posts.details',$data);
     }
 
     /**
@@ -59,9 +68,13 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Post $post)
     {
-        //
+        //@dd($post);
+        $data = [
+            'post' => $post
+        ];
+        return view('posts.forms',$data);
     }
 
     /**
@@ -71,9 +84,12 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Post $post)
     {
-        //
+        $data = $request->all();
+        $post->update($data);
+
+        return redirect()->route('pagina-home',$post);
     }
 
     /**

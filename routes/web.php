@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 //voglio che la mia home coincida con la lista di post
-Route::get('/','PostController@index');
+Route::get('/','PostController@index')->name('pagina-home');
 
 Route::resource('/posts','PostController');
