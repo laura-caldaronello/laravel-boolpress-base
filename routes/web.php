@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//voglio che la mia home coincida con la lista di post
+Route::get('/','PostController@index');
+
+Route::resource('/posts','PostController');
