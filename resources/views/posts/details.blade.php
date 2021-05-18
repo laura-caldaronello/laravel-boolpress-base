@@ -2,7 +2,7 @@
 
 @section('title','dettagli')
 @section('css')
-    <link rel="stylesheet" href="{{asset('css/app-home.css')}}">
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
 @endsection
 
 @section('content')

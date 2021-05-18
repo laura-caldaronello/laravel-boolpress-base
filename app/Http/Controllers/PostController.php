@@ -70,7 +70,6 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //@dd($post);
         $data = [
             'post' => $post
         ];
